@@ -1,35 +1,32 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
     public Animator transition;
-    
-    public float transitionTime = 1f;
 
-    // Update is called once per frame
-    void Update()
+    public void OnTransition(InputAction.CallbackContext ctx)
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            LoadNextLevel();
-        }
+        if (!ctx.performed) return;
+        LoadNextLevel();
     }
 
-
-    public void LoadNextLevel()
+    private void LoadNextLevel()
     {
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
-    IEnumerator LoadLevel(int levelIndex)
+
+    private IEnumerator LoadLevel(int levelIndex)
     {
-        transition.SetTrigger("Start");
+        transition.SetTrigger("LevelComplete");
+
+        var duration = transition.GetCurrentAnimatorStateInfo(0).length;
         
-        yield return new WaitForSeconds(transitionTime);
-        
+        yield return new WaitForSeconds(duration);
+
         SceneManager.LoadScene(levelIndex);
-        
     }
 }
