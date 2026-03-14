@@ -602,42 +602,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2128228728686031821, guid: 3c23c5743bfd3d747ae9e410c6eae288, type: 3}
-      propertyPath: m_ActionEvents.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2128228728686031821, guid: 3c23c5743bfd3d747ae9e410c6eae288, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_ActionId
-      value: 43d6186b-bdc7-4d92-b1fa-377d6a9de040
-      objectReference: {fileID: 0}
-    - target: {fileID: 2128228728686031821, guid: 3c23c5743bfd3d747ae9e410c6eae288, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_ActionId
-      value: ac885427-e20f-4aad-8e54-c8c49e643f7f
-      objectReference: {fileID: 0}
-    - target: {fileID: 2128228728686031821, guid: 3c23c5743bfd3d747ae9e410c6eae288, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_ActionName
-      value: 'Player Inputs/Mouse Move[/Mouse/position]'
-      objectReference: {fileID: 0}
-    - target: {fileID: 2128228728686031821, guid: 3c23c5743bfd3d747ae9e410c6eae288, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_ActionName
-      value: 'Player Inputs/Click[/Mouse/press,/Mouse/rightButton]'
-      objectReference: {fileID: 0}
-    - target: {fileID: 2128228728686031821, guid: 3c23c5743bfd3d747ae9e410c6eae288, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2128228728686031821, guid: 3c23c5743bfd3d747ae9e410c6eae288, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2128228728686031821, guid: 3c23c5743bfd3d747ae9e410c6eae288, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2128228728686031821, guid: 3c23c5743bfd3d747ae9e410c6eae288, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2128228728686031821, guid: 3c23c5743bfd3d747ae9e410c6eae288, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 278389913}
@@ -649,38 +613,6 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 278389913}
-    - target: {fileID: 2128228728686031821, guid: 3c23c5743bfd3d747ae9e410c6eae288, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2128228728686031821, guid: 3c23c5743bfd3d747ae9e410c6eae288, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2128228728686031821, guid: 3c23c5743bfd3d747ae9e410c6eae288, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnMouseMove
-      objectReference: {fileID: 0}
-    - target: {fileID: 2128228728686031821, guid: 3c23c5743bfd3d747ae9e410c6eae288, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnClick
-      objectReference: {fileID: 0}
-    - target: {fileID: 2128228728686031821, guid: 3c23c5743bfd3d747ae9e410c6eae288, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: InputScript, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2128228728686031821, guid: 3c23c5743bfd3d747ae9e410c6eae288, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: InputScript, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2128228728686031821, guid: 3c23c5743bfd3d747ae9e410c6eae288, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2128228728686031821, guid: 3c23c5743bfd3d747ae9e410c6eae288, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 5580519551425810840, guid: 3c23c5743bfd3d747ae9e410c6eae288, type: 3}
       propertyPath: transition
       value: 
@@ -702,14 +634,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 315911825738672354, guid: 694066f5c0fbe31418d2833742497fca, type: 3}
-      propertyPath: inputType
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 315911825738672354, guid: 694066f5c0fbe31418d2833742497fca, type: 3}
-      propertyPath: numberOfClicks
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 315911825738672354, guid: 694066f5c0fbe31418d2833742497fca, type: 3}
       propertyPath: onWin.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

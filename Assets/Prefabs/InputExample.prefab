@@ -75,8 +75,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  inputType: 0
+  inputType: 7
   allowedTime: 30
+  numberOfClicks: 30
 --- !u!212 &6845627785515750218
 SpriteRenderer:
   serializedVersion: 2

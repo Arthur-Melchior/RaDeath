@@ -4,9 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] private AudioSource _music;
+    public AudioSource _music;
 
-    [SerializeField] private AudioSource _SoundEffect;
+    public AudioSource _SoundEffect;
 
     public AudioClip Level1;
 

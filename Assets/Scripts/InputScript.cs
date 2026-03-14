@@ -19,6 +19,7 @@ public class InputScript : MonoBehaviour
 {
     public UnityEvent onFail;
     public UnityEvent onWin;
+    public UnityEvent correctAction;
     [SerializeField] private InputType inputType;
     [SerializeField] private float allowedTime;
     [SerializeField] private float numberOfClicks;
@@ -48,6 +49,7 @@ public class InputScript : MonoBehaviour
         if (pressedKey.name == SolveInput())
         {
             onWin?.Invoke();
+            Destroy(this);
         }
         else
         {
@@ -83,19 +85,21 @@ public class InputScript : MonoBehaviour
             onFail?.Invoke();
             return;
         }
-        
+
         var clickName = ctx.control.displayName;
-        
+
         if (clickName == "" || clickName != _previousClick)
         {
             _clickScore++;
+            _previousClick = clickName;
+            correctAction?.Invoke();
             if (_clickScore >= numberOfClicks)
             {
                 onWin?.Invoke();
+                Destroy(this);
             }
         }
 
-        _previousClick = clickName;
         Debug.Log(_previousClick);
         Debug.Log(_clickScore);
     }
@@ -105,13 +109,13 @@ public class InputScript : MonoBehaviour
         var mousePositon = ctx.ReadValue<Vector2>();
         var difference = _previousMousePosition - mousePositon;
         _mouseScore += difference.y;
-        Debug.Log(_mouseScore);
         _previousMousePosition = mousePositon;
         if (inputType == InputType.MouseUp)
         {
             if (_mouseScore < -500)
             {
                 onWin?.Invoke();
+                Destroy(this);
             }
         }
         else if (inputType == InputType.MouseDown)
@@ -119,6 +123,7 @@ public class InputScript : MonoBehaviour
             if (_mouseScore > 500)
             {
                 onWin?.Invoke();
+                Destroy(this);
             }
         }
     }
