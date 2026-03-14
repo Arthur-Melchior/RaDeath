@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,6 +13,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip Level2;
     
     public AudioClip Level3;
+
+    public AudioClip Level4;
 
     public AudioClip PlatineScratch;
 
@@ -54,6 +57,9 @@ public class AudioManager : MonoBehaviour
                 break;
             case "Level3":
                 clipToPlay = Level3;
+                break;
+            case "Level4":
+                clipToPlay = Level4;
                 break;
         }
 
