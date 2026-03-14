@@ -25,5 +25,10 @@ public class InputScript : MonoBehaviour
          onFail?.Invoke();
       }
    }
+
+   public void OnTest2(InputAction.CallbackContext ctx)
+   {
+      
+   }
     
 }
