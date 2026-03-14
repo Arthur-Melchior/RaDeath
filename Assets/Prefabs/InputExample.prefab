@@ -45,13 +45,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f5c7dae14d56bf468f85a67da05065b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InputScript
-  inputType: space
   onFail:
     m_PersistentCalls:
-      m_Calls: []
-  onSuccess:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: FailureScript, Assembly-CSharp
+        m_MethodName: OnFail
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onWin:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: WInScript, Assembly-CSharp
+        m_MethodName: OnWin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  inputType: 0
+  allowedTime: 30
 --- !u!212 &6845627785515750218
 SpriteRenderer:
   serializedVersion: 2
