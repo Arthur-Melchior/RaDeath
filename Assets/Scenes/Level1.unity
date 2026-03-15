@@ -617,15 +617,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2128228728686031821, guid: 3c23c5743bfd3d747ae9e410c6eae288, type: 3}
       propertyPath: m_ActionEvents.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2128228728686031821, guid: 3c23c5743bfd3d747ae9e410c6eae288, type: 3}
       propertyPath: m_ActionEvents.Array.data[3].m_ActionId
       value: a16c3eed-f928-4f10-9792-bf0d6da45732
       objectReference: {fileID: 0}
     - target: {fileID: 2128228728686031821, guid: 3c23c5743bfd3d747ae9e410c6eae288, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionId
+      value: 91079ba5-5de0-41c7-88ac-1f26bbcb8228
+      objectReference: {fileID: 0}
+    - target: {fileID: 2128228728686031821, guid: 3c23c5743bfd3d747ae9e410c6eae288, type: 3}
       propertyPath: m_ActionEvents.Array.data[3].m_ActionName
       value: 'Player Inputs/RIght Click[/Mouse/rightButton]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2128228728686031821, guid: 3c23c5743bfd3d747ae9e410c6eae288, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionName
+      value: 'Player Inputs/Jump[/Keyboard/space]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2128228728686031821, guid: 3c23c5743bfd3d747ae9e410c6eae288, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2128228728686031821, guid: 3c23c5743bfd3d747ae9e410c6eae288, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2128228728686031821, guid: 3c23c5743bfd3d747ae9e410c6eae288, type: 3}
       propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.size
@@ -740,6 +756,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2910768982109025590, guid: ef6617ca238712241a0980ba518d9c29, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2290441571212216035, guid: 0c4edbc851a6148439500f62ac0a782c, type: 3}
     - target: {fileID: 7990506535186513809, guid: ef6617ca238712241a0980ba518d9c29, type: 3}
       propertyPath: m_Name
       value: LevelTransitionExample

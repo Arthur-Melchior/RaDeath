@@ -109,10 +109,9 @@ public class InputScript : MonoBehaviour
     public void OnMouseMove(InputAction.CallbackContext ctx)
     {
         var mouseDelta = Mouse.current.delta.ReadValue();
-        if (mouseDelta.magnitude < 40)
-        {
-            mouseScore += mouseDelta.y;
-        }
+
+        mouseScore += mouseDelta.y;
+
 
         if (mouseScore > mouseMoveScore)
         {

@@ -30,8 +30,6 @@ public class LevelLoader : MonoBehaviour
     private IEnumerator LoadLevel(int levelIndex)
     {
         transition.SetTrigger("LevelComplete");
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
 
         var duration = transition.GetCurrentAnimatorStateInfo(0).length;
 

@@ -15,12 +15,6 @@ public class Level3Script : MonoBehaviour
     private bool _mouseDownWin;
     private bool _mouseUpWin;
 
-    private void Start()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
-
     public void OnMouseMove(InputAction.CallbackContext ctx)
     {
         if (inputScript.mouseScore > 1 && !_mouseDownWin)
