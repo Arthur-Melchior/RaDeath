@@ -20,6 +20,7 @@ public enum InputType
 public class InputScript : MonoBehaviour
 {
     public UnityEvent onFail;
+    public Score score;
     public UnityEvent onWin;
     public UnityEvent correctAction;
     public float mouseScore;
@@ -38,8 +39,9 @@ public class InputScript : MonoBehaviour
         {
             onFail?.Invoke();
         }
-
+        
         _elapsedTime += Time.deltaTime;
+        Debug.Log(_elapsedTime);
     }
 
     public void OnKeyDown(InputAction.CallbackContext ctx)
@@ -82,12 +84,6 @@ public class InputScript : MonoBehaviour
     {
         if (!ctx.performed) return;
 
-        if (inputType != InputType.Click)
-        {
-            onFail?.Invoke();
-            return;
-        }
-
         var clickName = ctx.control.displayName;
 
         if (clickName == "" || clickName != _previousClick)
@@ -95,7 +91,7 @@ public class InputScript : MonoBehaviour
             _clickScore++;
             _previousClick = clickName;
             correctAction?.Invoke();
-            if (_clickScore >= numberOfClicks)
+            if (_clickScore >= numberOfClicks + score.score)
             {
                 onWin?.Invoke();
                 Destroy(this);
@@ -112,13 +108,12 @@ public class InputScript : MonoBehaviour
 
         mouseScore += mouseDelta.y;
 
-
-        if (mouseScore > mouseMoveScore)
+        if (mouseScore > mouseMoveScore + score.score * 10)
         {
             onWin?.Invoke();
         }
 
-        if (mouseScore < -mouseMoveScore)
+        if (mouseScore < -mouseMoveScore + score.score * 10)
         {
             onWin?.Invoke();
         }

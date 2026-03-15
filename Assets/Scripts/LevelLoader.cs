@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelLoader : MonoBehaviour
 {
     public Animator transition;
+    public Score score;
 
     public void OnTransition(InputAction.CallbackContext ctx)
     {
@@ -30,6 +31,7 @@ public class LevelLoader : MonoBehaviour
     private IEnumerator LoadLevel(int levelIndex)
     {
         transition.SetTrigger("LevelComplete");
+        score.score++;
 
         var duration = transition.GetCurrentAnimatorStateInfo(0).length;
 

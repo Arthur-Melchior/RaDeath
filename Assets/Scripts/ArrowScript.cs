@@ -17,21 +17,14 @@ public class ArrowScript : MonoBehaviour
 
         var pressedKey = Keyboard.current.allKeys.First(key => key.wasPressedThisFrame);
 
-        if (pressedKey.name == "s" && position.ToString().ToLower() != "down")
+        switch (pressedKey.name)
         {
-            isCorrect = false;
-        }
-        if (pressedKey.name == "d" && position.ToString().ToLower() != "right")
-        {
-            isCorrect = false;
-        }
-        if (pressedKey.name == "a" && position.ToString().ToLower() != "left")
-        {
-            isCorrect = false;
-        }
-        if (pressedKey.name == "w" && position.ToString().ToLower() != "up")
-        {
-            isCorrect = false;
+            case "s" when position.ToString().ToLower() != "down":
+            case "d" when position.ToString().ToLower() != "right":
+            case "a" when position.ToString().ToLower() != "left":
+            case "w" when position.ToString().ToLower() != "up":
+                isCorrect = false;
+                break;
         }
 
         if (isCorrect)

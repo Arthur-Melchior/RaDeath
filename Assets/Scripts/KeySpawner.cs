@@ -15,6 +15,7 @@ public enum Position
 public class KeySpawner : MonoBehaviour
 {
     public PlayerInput playerInput;
+    public Score score;
     [SerializeField] private GameObject key;
     [SerializeField] private Transform leftPosition;
     [SerializeField] private Transform downPosition;
@@ -62,6 +63,8 @@ public class KeySpawner : MonoBehaviour
     private void Start()
     {
         StartCoroutine(KeyLoop());
+        var rigid = key.GetComponent<Rigidbody2D>();
+        rigid.gravityScale *= 1 + score.score * 0.01f;
     }
 
     private IEnumerator KeyLoop()

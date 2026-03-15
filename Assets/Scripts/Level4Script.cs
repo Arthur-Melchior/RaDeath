@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -6,16 +7,27 @@ public class Level4Script : MonoBehaviour
 {
     public float requiredSuccess;
     public float maxFailure;
-    public DancerScript dancerScript;
     public UnityEvent onWin;
     public UnityEvent onFail;
     private float _successCount;
     private float _failureCount;
+    public Score score;
+
+    public List<Sprite> sprites;
+    public SpriteRenderer spriteRenderer;
+
+    private int index = 0;
+
+    public void OnChange()
+    {
+        index = (index + 1) % sprites.Count;
+        spriteRenderer.sprite = sprites[index];
+    }
     
     public void OnSuccess(GameObject go)
     {
         _successCount++;
-        dancerScript.OnChange();
+        OnChange();
         Destroy(go);
         if (_successCount > requiredSuccess)
         {
@@ -23,10 +35,15 @@ public class Level4Script : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        requiredSuccess += MathF.Round(score.score / 10f);
+    }
+
     public void OnFail(GameObject go)
     {
         _failureCount++;
-        dancerScript.OnChange();
+        OnChange();
         Destroy(go);
         if (_failureCount > maxFailure)
         {
