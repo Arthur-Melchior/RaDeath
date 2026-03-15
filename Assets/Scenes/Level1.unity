@@ -740,21 +740,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2852795079912690836, guid: ef6617ca238712241a0980ba518d9c29, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2910768982109025590, guid: ef6617ca238712241a0980ba518d9c29, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -3959132392478003732, guid: 6a480f90da0be0947a60db8e6f562ff7, type: 3}
     - target: {fileID: 7990506535186513809, guid: ef6617ca238712241a0980ba518d9c29, type: 3}
       propertyPath: m_Name
       value: LevelTransitionExample
-      objectReference: {fileID: 0}
-    - target: {fileID: 7990506535186513809, guid: ef6617ca238712241a0980ba518d9c29, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
