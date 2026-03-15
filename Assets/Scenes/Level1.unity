@@ -426,7 +426,7 @@ MonoBehaviour:
   secondSprite: {fileID: 5773781881215686792, guid: 7d39f9121aca1f64f9bbfe5e138a27a4, type: 3}
   thirdSprite: {fileID: 5488167951752679976, guid: 7300093fdebf8f64b835a84b4c68e2d2, type: 3}
   manager: {fileID: 1045583969}
-  punch: {fileID: 8300000, guid: b041ddbd45434864c871555f847e7465, type: 3}
+  punch: {fileID: 8300000, guid: b223d339705ad914e8afc6f7332c4dbc, type: 3}
   transition: {fileID: 347534032}
 --- !u!4 &1464256615
 Transform:
