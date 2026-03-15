@@ -1,7 +1,9 @@
+using System;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public enum InputType
 {
@@ -20,11 +22,12 @@ public class InputScript : MonoBehaviour
     public UnityEvent onFail;
     public UnityEvent onWin;
     public UnityEvent correctAction;
-    [SerializeField] private InputType inputType;
+    public float mouseScore;
+    public InputType inputType;
     [SerializeField] private float allowedTime;
     [SerializeField] private float numberOfClicks;
+    public float mouseMoveScore;
     private Vector2 _previousMousePosition;
-    private float _mouseScore;
     private float _elapsedTime;
     private string _previousClick;
     private float _clickScore;
@@ -37,6 +40,12 @@ public class InputScript : MonoBehaviour
         }
 
         _elapsedTime += Time.deltaTime;
+    }
+
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
 
@@ -106,25 +115,22 @@ public class InputScript : MonoBehaviour
 
     public void OnMouseMove(InputAction.CallbackContext ctx)
     {
-        var mousePositon = ctx.ReadValue<Vector2>();
-        var difference = _previousMousePosition - mousePositon;
-        _mouseScore += difference.y;
-        _previousMousePosition = mousePositon;
-        if (inputType == InputType.MouseUp)
+        var mouseDelta = Mouse.current.delta.ReadValue();
+        if (mouseDelta.magnitude < 40)
         {
-            if (_mouseScore < -500)
-            {
-                onWin?.Invoke();
-                Destroy(this);
-            }
+            mouseScore += mouseDelta.y;
         }
-        else if (inputType == InputType.MouseDown)
+
+        if (mouseScore > mouseMoveScore)
         {
-            if (_mouseScore > 500)
-            {
-                onWin?.Invoke();
-                Destroy(this);
-            }
+            onWin?.Invoke();
         }
+
+        if (mouseScore < -mouseMoveScore)
+        {
+            onWin?.Invoke();
+        }
+
+        Debug.Log(mouseScore);
     }
 }

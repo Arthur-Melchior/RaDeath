@@ -344,33 +344,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2852795079912690836, guid: ef6617ca238712241a0980ba518d9c29, type: 3}
-      propertyPath: m_SortingOrder
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 2910768982109025590, guid: ef6617ca238712241a0980ba518d9c29, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -3878114727832295615, guid: 5eb5a32a824a6a7499986162510e2393, type: 3}
-    - target: {fileID: 2910768982109025590, guid: ef6617ca238712241a0980ba518d9c29, type: 3}
-      propertyPath: m_SortingOrder
-      value: 20
-      objectReference: {fileID: 0}
+    - target: {fileID: 3572645746044784786, guid: ef6617ca238712241a0980ba518d9c29, type: 3}
+      propertyPath: onTransitionEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1054183823}
     - target: {fileID: 7990506535186513809, guid: ef6617ca238712241a0980ba518d9c29, type: 3}
       propertyPath: m_Name
       value: LevelTransitionExample
       objectReference: {fileID: 0}
-    - target: {fileID: 7990506535186513809, guid: ef6617ca238712241a0980ba518d9c29, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7990506535186513809, guid: ef6617ca238712241a0980ba518d9c29, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1891337273}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef6617ca238712241a0980ba518d9c29, type: 3}
 --- !u!1 &199928580
 GameObject:
@@ -1357,7 +1346,7 @@ Transform:
   m_GameObject: {fileID: 1348497375}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.28, y: -4.3, z: 0}
+  m_LocalPosition: {x: -25.75, y: -4.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1840,38 +1829,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1744669505}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1891337271 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7990506535186513809, guid: ef6617ca238712241a0980ba518d9c29, type: 3}
-  m_PrefabInstance: {fileID: 141074382}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1891337273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1891337271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a650fcf8c3598db4d9b2820b4ead1d96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LevelTransitionScript
-  onTransitionEnd:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1054183823}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: move
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1924324559
 GameObject:
   m_ObjectHideFlags: 0
