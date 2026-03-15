@@ -15,16 +15,26 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int randomIndex;
+
+        do
+        {
+            randomIndex = Random.Range(1, 5);
+        } while (randomIndex == currentSceneIndex);
+
+        StartCoroutine(LoadLevel(randomIndex));
     }
 
 
     private IEnumerator LoadLevel(int levelIndex)
     {
         transition.SetTrigger("LevelComplete");
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
 
         var duration = transition.GetCurrentAnimatorStateInfo(0).length;
-        
+
         yield return new WaitForSeconds(duration);
 
         SceneManager.LoadScene(levelIndex);

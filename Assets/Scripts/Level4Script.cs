@@ -6,6 +6,7 @@ public class Level4Script : MonoBehaviour
 {
     public float requiredSuccess;
     public float maxFailure;
+    public DancerScript dancerScript;
     public UnityEvent onWin;
     public UnityEvent onFail;
     private float _successCount;
@@ -14,6 +15,7 @@ public class Level4Script : MonoBehaviour
     public void OnSuccess(GameObject go)
     {
         _successCount++;
+        dancerScript.OnChange();
         Destroy(go);
         if (_successCount > requiredSuccess)
         {
@@ -24,6 +26,7 @@ public class Level4Script : MonoBehaviour
     public void OnFail(GameObject go)
     {
         _failureCount++;
+        dancerScript.OnChange();
         Destroy(go);
         if (_failureCount > maxFailure)
         {

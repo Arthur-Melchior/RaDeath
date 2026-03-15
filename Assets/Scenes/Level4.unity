@@ -644,6 +644,7 @@ GameObject:
   - component: {fileID: 649520454}
   - component: {fileID: 649520453}
   - component: {fileID: 649520452}
+  - component: {fileID: 649520455}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -725,6 +726,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &649520455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649520451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
 --- !u!1001 &676353018
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1371,7 +1416,7 @@ MonoBehaviour:
   downPosition: {fileID: 701257336}
   rightPosition: {fileID: 1524913241}
   upPosition: {fileID: 1900354765}
-  spawnDelay: 3
+  spawnDelay: 1.5
   level4Script: {fileID: 2111442503}
 --- !u!4 &1528741815
 Transform:
@@ -1615,6 +1660,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1949830340}
   - component: {fileID: 1949830339}
+  - component: {fileID: 1949830341}
   m_Layer: 0
   m_Name: pose_haut_0
   m_TagString: Untagged
@@ -1697,6 +1743,79 @@ Transform:
   - {fileID: 449860034}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1949830341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949830338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaab26cfcc478194888a17925d8f0d8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DancerScript
+  sprite1: {fileID: -4557962882547511217, guid: bb19326c99f8c9541ab2c0bc84e3caa2, type: 3}
+  sprite2: {fileID: -7390474334658214265, guid: 3e8c06bd7f2ca6e45b0ac349ef4580d4, type: 3}
+  sprite3: {fileID: -8653183363774772136, guid: d2659a3963ff18148aaafd2ef1aff5ce, type: 3}
+  sprite4: {fileID: 3572756979791649171, guid: 407550db7b814c4489cb9fdf5832bd17, type: 3}
+--- !u!1001 &2020745716
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1990911347614872811, guid: 7a4716b2836fce64b94be0912fefaf74, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.63898
+      objectReference: {fileID: 0}
+    - target: {fileID: 1990911347614872811, guid: 7a4716b2836fce64b94be0912fefaf74, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.80649
+      objectReference: {fileID: 0}
+    - target: {fileID: 1990911347614872811, guid: 7a4716b2836fce64b94be0912fefaf74, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1990911347614872811, guid: 7a4716b2836fce64b94be0912fefaf74, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1990911347614872811, guid: 7a4716b2836fce64b94be0912fefaf74, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1990911347614872811, guid: 7a4716b2836fce64b94be0912fefaf74, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1990911347614872811, guid: 7a4716b2836fce64b94be0912fefaf74, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1990911347614872811, guid: 7a4716b2836fce64b94be0912fefaf74, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1990911347614872811, guid: 7a4716b2836fce64b94be0912fefaf74, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1990911347614872811, guid: 7a4716b2836fce64b94be0912fefaf74, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3105679516457059511, guid: 7a4716b2836fce64b94be0912fefaf74, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7a4716b2836fce64b94be0912fefaf74, type: 3}
 --- !u!1 &2111442500
 GameObject:
   m_ObjectHideFlags: 0
@@ -1794,6 +1913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Level4Script
   requiredSuccess: 5
   maxFailure: 2
+  dancerScript: {fileID: 1949830341}
   onWin:
     m_PersistentCalls:
       m_Calls:
@@ -1840,3 +1960,4 @@ SceneRoots:
   - {fileID: 676353018}
   - {fileID: 194883213}
   - {fileID: 1528741815}
+  - {fileID: 2020745716}

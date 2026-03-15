@@ -7,7 +7,7 @@ public class Menu : MonoBehaviour
     public void OnClickPlay()
     {
         Debug.Log("METAL!!!");
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Level1");
     }
     public void OnClickExit()
     {

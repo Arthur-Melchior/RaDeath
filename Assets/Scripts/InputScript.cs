@@ -42,13 +42,6 @@ public class InputScript : MonoBehaviour
         _elapsedTime += Time.deltaTime;
     }
 
-    private void Start()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
-
-
     public void OnKeyDown(InputAction.CallbackContext ctx)
     {
         if (!ctx.performed) return;
