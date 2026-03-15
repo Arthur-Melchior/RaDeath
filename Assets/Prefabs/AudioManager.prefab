@@ -48,10 +48,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   _music: {fileID: 4538512543781162200}
   _SoundEffect: {fileID: 744675126291056927}
-  Level1: {fileID: 0}
-  Level2: {fileID: 0}
-  Level3: {fileID: 0}
-  Level4: {fileID: 8300000, guid: 538d40d1260c3d04387e1da7dbe642e5, type: 3}
+  Level1: {fileID: 8300000, guid: 538d40d1260c3d04387e1da7dbe642e5, type: 3}
+  Level2: {fileID: 8300000, guid: f4fb716f34e4b57428d5e1c8436eab0e, type: 3}
+  Level3: {fileID: 8300000, guid: 7d9189927d624e840971df348efd7a20, type: 3}
+  Level4: {fileID: 8300000, guid: 9d379045caa52ae4f9025b692e8bb030, type: 3}
   PlatineScratch: {fileID: 0}
   Waves: {fileID: 0}
   Jump: {fileID: 0}
